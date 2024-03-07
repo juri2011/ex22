@@ -44,8 +44,8 @@
 		1. 아래처럼 태그를 작성하여 스캔하는 방식
 		2. 환경설정 파일을 작성하여 직접 지정하는 방식
 	-->
-	<mybatis-spring:scan base-package="com.study.erum.mapper"/>
+	<mybatis-spring:scan base-package="org.zerock.controller.mapper"/>
 	
-	<context:component-scan base-package="com.study.erum.sample" />
+	<context:component-scan base-package="org.zerock.controller.sample" />
 	
 </beans>
