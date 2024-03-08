@@ -6,7 +6,7 @@
 
 	<!-- 게시글 전체 조회 -->
   <select id="getList" resultType="org.zerock.domain.BoardVO">
-    select * from tbl_board where bno > #{bno}
+    select * from tbl_board where bno > 0
   </select>
   
 </mapper>
