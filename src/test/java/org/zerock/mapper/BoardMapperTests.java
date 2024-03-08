@@ -16,12 +16,14 @@ public class BoardMapperTests {
   @Autowired
   private BoardMapper mapper;
   
+  //전체 조회 단위 테스트
   @Test
   public void testGetList() {
     //람다식
     mapper.getList().forEach(board->log.info(board));
   }
   
+  //작성 단위 테스트
   @Test
   public void testInsert() {
     BoardVO board = new BoardVO();
@@ -35,6 +37,7 @@ public class BoardMapperTests {
     log.info(board);
   }
   
+  //작성 단위 테스트(bno의 값을 가져옴)
   @Test
   public void testInsertSelectKey() {
     BoardVO board = new BoardVO();
@@ -47,11 +50,18 @@ public class BoardMapperTests {
     log.info(board);
   }
   
+  //상세보기 단위 테스트
   @Test
   public void testRead() {
     BoardVO board = mapper.read(4L);
     
     log.info(board);
+  }
+  
+  //삭제 단위 테스
+  @Test
+  public void testDelete() {
+    log.info("DELETE count: " + mapper.delete(3L));
   }
   
 }
