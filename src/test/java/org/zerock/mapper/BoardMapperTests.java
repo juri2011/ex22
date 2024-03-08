@@ -35,4 +35,16 @@ public class BoardMapperTests {
     log.info(board);
   }
   
+  @Test
+  public void testInsertSelectKey() {
+    BoardVO board = new BoardVO();
+    board.setTitle("insertSelectKey 테스트용 글입니다");
+    board.setContent("insertSelectKey 내용테스트~~~~!!!");
+    board.setWriter("오주리");
+    
+    mapper.insertSelectKey(board);
+    
+    log.info(board);
+  }
+  
 }
