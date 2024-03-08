@@ -50,6 +50,11 @@
   </delete>
   
   <!-- 게시글 수정 -->
+  <!--
+	  개행하면서 sql문을 작성할 때
+	  불필요한 기호가 중간에 삽입되지 않았는지 확인해볼것
+	  (set과 where 사이에 필요없는 ,(콤마)가 삽입되어서 쿼리 실행이 안 되는 에러가 있었다.)
+   -->
   <update id="update">
   	update tbl_board
   	set title = #{title},
