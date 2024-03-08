@@ -51,11 +51,11 @@
   
   <!-- 게시글 수정 -->
   <update id="update">
-  	update tbl_board set
-  	title = #{title},
+  	update tbl_board
+  	set title = #{title},
   	content = #{content},
   	writer = #{writer},
-  	updatedate = sysdate,
+  	updatedate = sysdate
   	where bno = #{bno}
   </update>
 </mapper>
